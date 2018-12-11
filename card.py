@@ -25,5 +25,3 @@ if(matches[0] == '4'):
     print("Visa Card! Card number: ", end="")
     for match in matches:
         print(match, end="")
-
-        #testingg
