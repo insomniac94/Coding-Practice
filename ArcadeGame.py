@@ -1,3 +1,8 @@
+# Simulates an arcade game where a user will attempt to avoid enemy 
+# boxes that come from the top of the window sreen. The score will
+# will calcuated on printed in the top right of the screen. As the
+# score gets higher, the faster the blocks will come
+
 import pygame
 import random
 import sys
