@@ -38,5 +38,4 @@ if(question == 'Y'):
             print("Guess lower...")
 
         if guess == rNumber:
-            print("You won", uName, \
-            "and it only took you", attempts, "attempts!!")
+            print("You won", uName, "and it only took you", attempts, "attempts!!")
