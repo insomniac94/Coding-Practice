@@ -1,7 +1,7 @@
 #!user/bin/env python3
 
-# Simple python game to have a user enter their name and ask if they want to play a game, if not the program
-# will exit and if so the user will try and guess a number between 1-100.
+# Simple python game to have a user enter their name and ask if they want to play a game, if 
+# not the program will exit and if so the user will try and guess a number between 1-100.
 
 import random
 
