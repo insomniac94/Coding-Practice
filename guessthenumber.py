@@ -12,10 +12,10 @@ print("Hello,", uName + "!",)
 
 question = input("Would you like to play a game? [Y/N] ")
 
-if(question == 'N'):
+if question == 'N':
     print("oh okay... bye now..")
 
-if(question == 'Y'):
+if question == 'Y':
     print("I'm thinking of a number between 1-100")
 
     guess = int(input("Have a guess: "))
