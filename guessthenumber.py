@@ -41,4 +41,4 @@ if(question == 'Y'):
 
         if guess == rNumber:
             print("You won", uName, \
-            "and it only took you", attempts, "attempts!!")
+            "and it only took you", attempts, "attempts!")
