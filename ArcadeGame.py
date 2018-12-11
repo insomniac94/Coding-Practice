@@ -31,26 +31,14 @@ game_over = False
 
 clock = pygame.time.Clock()
 
-myFont = pygame.font.SysFont("monospace", 35)
+myFont = pygame.font.SysFont("Courier New", 35)
 
 def level_difficulty(score, speed):
-	if score < 20:
-		speed = 3
-	elif score < 40:
-		speed = 4
-	elif score < 50:
-		speed = 5
-	elif score < 60:
-		speed = 5
-	else:
-		speed = 15
 
 	#speed will be proportional to score
-	#speed = score / 10 + 3
-	
+	speed = score / 10 + 3
 	return speed
 	
-
 def drop_enemies(enemy_list):
 	delay = random.random()
 	if len(enemy_list) < 10 and delay < 0.1:
