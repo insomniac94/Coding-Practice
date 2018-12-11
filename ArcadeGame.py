@@ -1,6 +1,6 @@
 # Simulates an arcade game where a user will attempt to avoid enemy 
 # squares that come from the top of the window sreen. The score will
-# will incremented based on the number of blocks avoided and printed 
+# will increment based on the number of blocks avoided and be printed 
 # in the bottom right of the screen. As the score gets higher, the 
 # blocks will come down faster.
 
