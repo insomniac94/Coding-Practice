@@ -4,17 +4,24 @@
 # in the bottom right of the screen. As the score gets higher, the 
 # blocks will come down faster.
 
+# Will prompt user for their name and create a file that will store
+# all their attempts
+
 import pygame
 import random
 import sys
 
 pygame.init()
 
+appendFile = open("All_Attempts.txt", "a")
+readFile = open("All_Attempts.txt", "r")
+
+name = input("What is your name? ")
+
+appendFile.write(name + ":")
+
 WIDTH = 800
 HEIGHT = 600
-
-RESULT_SCREEN_WIDTH = 350 
-RESULT_SCREEN_HEIGHT = 200
 
 BLACK = (0,0,0)
 RED = (255,0,0)
@@ -23,7 +30,6 @@ WHITE = (255,255,255)
 BACKGROUND_COLOR = (133,79,249)
 
 speed = 10
-
 score = 0
 
 square_size = 50
@@ -41,12 +47,6 @@ game_over = False
 clock = pygame.time.Clock()
 
 myFont = pygame.font.SysFont("Courier New", 25)
-
-def print_results(score):
-	result_screen = pygame.display.set_mode((RESULT_SCREEN_WIDTH, RESULT_SCREEN_HEIGHT))
-	results = "Score:" + str(score)
-	label = myFont.render(results, 1, BLACK)
-	result_screen.blit(label, (WIDTH/2,HEIGHT/2))
 
 def level_difficulty(score, speed):
 	#speed will be proportional to score
@@ -114,7 +114,6 @@ while not game_over:
 	if collision_detection(user_pos, enemy_pos):
 		game_over = True
 
-
 	drop_enemies(enemy_list)
 	score = update_enemy_pos(enemy_list, score)
 	speed = level_difficulty(score, speed)
@@ -124,14 +123,9 @@ while not game_over:
 	screen.blit(label, (WIDTH-180,HEIGHT-40))
 
 	if collision_check(enemy_list, user_pos):
-		displayResults = True
 		game_over = True
-
-		while displayResults:
-			print_results(score)
-			for event in pygame.event.get():
-				if event.type == pygame.QUIT:
-					sys.exit()
+		appendFile.write(str(score) + '\n')
+		appendFile.close()
 
 	draw_enemies(enemy_list)
 
