@@ -6,16 +6,16 @@ import random
 rNumber = random.randint(1,100)
 attempts = 1
 
-uName = input("Hello, what is your name? ")
+uName = input("Hello, what is your name?",)
 
-print("Hello,", uName + "!",)
+print("Hello, ",uName + "!")
 
 question = input("Would you like to play a game? [Y/N] ")
 
-if question == 'N':
+if question == 'N' or question == 'n':
     print("oh okay... bye now..")
 
-if question == 'Y':
+if question == 'Y' or question == 'y':
     print("I'm thinking of a number between 1-100")
 
     guess = int(input("Have a guess: "))
@@ -36,4 +36,5 @@ if question == 'Y':
             print("Guess lower...")
 
         if guess == rNumber:
-            print("You won", uName, "and it only took you", attempts, "attempts!!")
+            print("You won",uName,"and it only took you",attempts,"attempts!")
+            print("The random number was",rNumber)
