@@ -11,7 +11,9 @@ for match in matches:
     if count <= 4:
         print(match)
 
-if(matches[0] == '4'):
+if matches[0] == '4':
     print("Visa Card! Card number: ", end="")
     for match in matches:
         print(match, end="")
+else 
+    print("Not a Visa Card!")
