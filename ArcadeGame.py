@@ -129,7 +129,7 @@ while not game_over:
 
 	draw_enemies(enemy_list)
 
-	pygame.draw.rect(screen, BLUE, user_pos[0], user_pos[1], square_size, square_size)
+	pygame.draw.rect(screen, BLUE, (user_pos[0], user_pos[1], square_size, square_size))
 
 	clock.tick(30)
 
