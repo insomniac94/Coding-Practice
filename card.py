@@ -22,4 +22,4 @@ if matches[0] == '4':
     for match in matches:
         print(match, end="")
 else: 
-    print("Not a Visa Card!")
+    print("Not a Visa Card.")
