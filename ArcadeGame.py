@@ -1,24 +1,14 @@
 # Simulates an arcade game where a user will attempt to avoid enemy 
-# squares that come from the top of the window sreen. The score will
+# squares that come from the top of the window screen. The score will
 # will increment based on the number of blocks avoided and be printed 
 # in the bottom right of the screen. As the score gets higher, the 
 # blocks will come down faster.
-
-# Will prompt user for their name and create a file that will store
-# all their attempts
 
 import pygame
 import random
 import sys
 
 pygame.init()
-
-appendFile = open("All_Attempts.txt", "a")
-readFile = open("All_Attempts.txt", "r")
-
-name = input("What is your name? ")
-
-appendFile.write(name + ":")
 
 WIDTH = 800
 HEIGHT = 600
