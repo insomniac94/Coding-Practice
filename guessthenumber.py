@@ -6,7 +6,7 @@ import random
 rNumber = random.randint(1,100)
 attempts = 1
 
-uName = input("Hello, what is your name?",)
+uName = input("Hello, what is your name? ",)
 
 print("Hello, ",uName + "!")
 
